@@ -24,6 +24,12 @@ public class ControlPrendreEtal {
 		if (gaulois != null) {
 			numeroEtal = village.installerVendeur(gaulois, produit, nbProduit);
 		}
+		
+		// On transforme l'index du tableau (0 à 4) en numéro d'étal pour l'utilisateur (1 à 5)
+		if (numeroEtal != -1) {
+			return numeroEtal + 1;
+		}
+		
 		return numeroEtal;
 	}
 
